@@ -1,0 +1,14 @@
+[Unit]
+Description=unicorn chan
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nona/codes/unicorn
+ExecStart=/home/nona/.rbenv/shims/bundle exec rackup -p11111
+Restart=always
+Environment=ENABLE_POWEROFF=true
+Environment=POWEROFF_TOKEN=poyopoyo
+Environment=POWEROFF_USER_ID=Upayo
+
+[Install]
+WantedBy=default.target
